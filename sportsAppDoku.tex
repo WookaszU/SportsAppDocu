@@ -199,7 +199,7 @@ Prace planujemy podzielić na dwa zespoły:
 \begin{itemize}
 \item Zespół zajmujący się frontend'em
 \item Zespół zajmujący się backend'em
-\end{itemize}
+\end{itemize}~\\
 
 Do końca kwietnia 2018 roku planujemy zapoznać się z problemem, stworzyć wizję oraz wybrać i zapoznać się z używanymi technologiami. Na koniec czerwca planujemy wykonanie pierwszego działającego prototypu aplikacji. Dalsze prace implementacyjne planujemy prowadzić w czasie wakacji aż do października, w którym powstanie finalna wersja środowiska. Następnie planujemy, krótki okres czasu na testowanie  Dokumentacja będzie rozwijana równolegle, w trakcie fazy implementacyjnej i testów.
 
@@ -240,6 +240,46 @@ Ryzyko & Ramy czasowe & Szansa wystąpienia & Wpływ na projekt & Przeciwdziała
 	Opóźnienie w stosunku do harmonogramu & cały czas trwania projektu & średnia & średni & Odpowiednie zaplanowanie prac \\ \hline
 \end{tabular}
 \end{table}
+
+\subsection{Wykorzystane technologie}
+
+\subsubsection{Serwer}
+
+Serwer RESTowy postanowiliśmy stworzyć z wykorzystaniem framework'a \texttt{Spring}\footnote{\url{https://spring.io/}}.~\\
+
+Wybraliśmy go ze względu na szereg kryteriów:
+\begin{enumerate}
+\item Udostępniany na licencji \texttt{Apache License 2.0}\footnote{\url{https://www.apache.org/licenses/LICENSE-2.0}}.
+\item Chcemy stworzyć serwer z wykorzystaniem języka \texttt{Java}\footnote{\url{https://www.oracle.com/java/index.html}}.
+\item Zawiera wiele elementów, które znacznie uproszczą nam pracę.
+\item Duże community - duża ilość oficjalnych poradników.
+\item "Lekki" szablon projektu nie wymuszający konkretnego modelu programowania.
+\end{enumerate}
+
+\subsubsection{Baza danych}
+
+\paragraph{Rodzaj bazy}~\\
+
+Wybrana przez nas baza danych to \texttt{MySQL}\footnote{\url{https://www.mysql.com/}}.~\\
+
+Cechy, z powodu których wybraliśmy \texttt{MySQL} to:
+\begin{enumerate}
+\item Podstawowa wersja jest darmowa - udostępniana na licencji \texttt{GPL}\footnote{\url{https://www.gnu.org/licenses/gpl-3.0.en.html}}.
+\item Proste zarządzanie bazą, dużo darmowych narzędzi.
+\item Duże community - duża ilość poradników, materiałów wspomagających.
+\end{enumerate}
+
+\paragraph{Dostęp do danych}~\\
+
+Do realizacji warstwy dostępu do danych postanowiliśmy wybrać framework \texttt{Hibernate}\footnote{\url{http://hibernate.org/}}.~\\
+
+Kryteria wyboru \texttt{Hibernate} to:
+\begin{enumerate}
+\item Jest darmowy - udostępniany na licencji \texttt{LGPL}\footnote{\url{https://www.gnu.org/licenses/lgpl-3.0.en.html}}.
+\item Łatwa konfiguracja z używanym frameworkiem Spring.
+\item Doświadczenia z poprzednich projektów.
+\item Duża popularność - znaczna liczba poradników.
+\end{enumerate}
 
 \subsection{Harmonogram prac (diagram Gantta)}
 
@@ -284,3 +324,4 @@ group label node/.append style={rotate=0}]{1}{17}
 % TODO opis diagramu Gantta
 
 \end{document}
+
